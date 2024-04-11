@@ -39,7 +39,6 @@
 
   const COMMANDS = new Map([
     ['a', { name: 'Chat', url: 'https://chat.openai.com' }],
-    ['b', { name: 'Dribbble', url: 'https://dribbble.com/shots/recent' }],
     ['c', { name: 'Calendar', url: 'https://calendar.google.com' }],
     [
       'd',
@@ -73,36 +72,13 @@
         url: 'https://reddit.com',
       },
     ],
-    ['s', { name: 'Supabase', url: 'https://supabase.com/dashboard/projects' }],
     ['t', { name: 'Translate', url: 'https://www.deepl.com/translator' }],
-    ['v', { name: 'Vercel', url: 'https://vercel.com/dashboard' }],
-    [
-      'x',
-      {
-        name: 'xvvvyz',
-        suggestions: [
-          'jelly.xvvvyz.xyz',
-          'torrent.xvvvyz.xyz',
-          'proxy.xvvvyz.xyz',
-        ],
-        url: 'https://pomodoro.xvvvyz.xyz',
-      },
-    ],
     [
       'y',
       {
         name: 'YouTube',
         searchTemplate: '/results?search_query={}',
         url: 'https://youtube.com/feed/subscriptions',
-      },
-    ],
-    [
-      '0',
-      {
-        name: 'localhost',
-        searchTemplate: ':{}',
-        suggestions: ['0 54323', '0 54324'],
-        url: 'http://localhost:3000',
       },
     ],
   ]);
