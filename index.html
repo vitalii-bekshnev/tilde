@@ -32,14 +32,28 @@
   const CONFIG = {
     commandPathDelimiter: '/',
     commandSearchDelimiter: ' ',
-    defaultSearchTemplate: 'https://duckduckgo.com/?q={}',
+    defaultSearchTemplate: 'https://google.com/?q={}',
     openLinksInNewTab: false,
     suggestionLimit: 4,
   };
 
   const COMMANDS = new Map([
-    ['a', { name: 'Chat', url: 'https://chat.openai.com' }],
-    ['c', { name: 'Calendar', url: 'https://calendar.google.com' }],
+    [
+      'a',
+      {
+        name: 'Chat',
+        url: 'https://chat.openai.com',
+        suggestions: ['https://chat.gcore.lu/', 'https://chat.openai.com'],
+      },
+    ],
+    [
+      'b',
+      {
+        name: 'Bamboo',
+        url: 'https://gcorelabs.bamboohr.com/employees/employee.php?id=1294&page=2094',
+      },
+    ],
+    ['c', { name: 'CI', url: 'https://jenkins.p.gc.onl/job/.QAA/' }],
     [
       'd',
       {
@@ -48,10 +62,21 @@
       },
     ],
     ['f', { name: 'Figma', url: 'https://www.figma.com' }],
-    ['g', { name: 'GitHub', url: 'https://github.com' }],
+    [
+      'g',
+      {
+        name: 'GitHub',
+        url: 'https://github.com',
+        suggestions: [
+          'https://github.com/G-Core/qaa-ui',
+          'https://github.com/G-Core/qaa-backend',
+          'https://github.com/G-Core/sp-qa_automation',
+        ],
+      },
+    ],
     ['h', { name: 'HDRezka', url: 'https://hdrezka.ag' }],
     ['i', { name: 'IMDB', url: 'https://imdb.com' }],
-    ['j', { name: 'Jenkins', url: 'https://jenkins.p.gc.onl/job/.QAA/' }],
+    ['j', { name: 'Jira', url: 'https://jira.gcore.lu/secure/Dashboard.jspa' }],
     ['k', { name: 'Keep', url: 'https://keep.google.com' }],
     ['m', { name: 'Maps', url: 'https://yandex.uz/maps' }],
     ['n', { name: 'Notion', url: 'https://www.notion.so' }],
@@ -75,8 +100,15 @@
         url: 'https://reddit.com',
       },
     ],
+    ['s', { name: 'Stocks', url: 'https://www.tradingview.com' }],
     ['t', { name: 'Translate', url: 'https://www.deepl.com/translator' }],
-    ['w', { name: 'Weather', url: 'https://yandex.uz/pogoda/?lat=41.28600311&lon=69.25374603' }],
+    [
+      'w',
+      {
+        name: 'Weather',
+        url: 'https://yandex.uz/pogoda/?lat=41.28600311&lon=69.25374603',
+      },
+    ],
     [
       'y',
       {
